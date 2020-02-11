@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="@dimen/_15sdp"
+        android:background="@drawable/retry_alert_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/reviewratingLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:id="@+id/titleTv"
+                    android:layout_toStartOf="@+id/close"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Mobile number change"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <ImageView
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/close"
+                    android:padding="5dp"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_close_black_48dp" />
+
+
+            </RelativeLayout>
+
+            <EditText
+                android:background="@drawable/grey_rounded_border"
+                android:padding="@dimen/_7sdp"
+                android:gravity="center"
+                android:inputType="number"
+                android:layout_margin="15dp"
+                android:maxLength="10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter mobile number"
+                android:id="@+id/mobileEt"/>
+
+            <com.chaos.view.PinView
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:inputType="number"
+                android:id="@+id/pinView"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_gravity="center"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                app:lineColor="@color/color_common"
+                android:textColor="@color/color_common"
+                android:textStyle="bold"
+                app:cursorWidth="2dp"
+                app:itemCount="4"
+                app:itemSpacing="@dimen/_10sdp"
+                app:itemHeight="40dp"
+                app:itemRadius="10dp"
+                app:itemWidth="40dp"
+                app:viewType="rectangle" />
+            <TextView
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:id="@+id/resendTv"
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:text="@string/resend_otp"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:background="@drawable/round_conner_btn"
+                android:textColor="@color/white"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="40dp"
+                android:text="@string/submit"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>
